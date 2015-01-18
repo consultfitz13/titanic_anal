@@ -1,6 +1,7 @@
 library(shiny)
 shinyUI(pageWithSidebar(
-  headerPanel("Make selections below to see how many in that group survived the Titanic Disaster compared to the total number of survivors"),
+  headerPanel("Make selections in the dropdown boxes to the left below and click the Submit button 
+              to see how many people in that group survived the Titanic Disaster compared to the total number of survivors"),
   sidebarPanel(
 
     selectInput(inputId = "class",
@@ -22,7 +23,7 @@ shinyUI(pageWithSidebar(
     
     ),
   mainPanel(
-    h3('Illustrating outputs'),
+    h3('Your selections'),
     h4('You entered'),
     verbatimTextOutput("oid1"),
     h4('You entered'),

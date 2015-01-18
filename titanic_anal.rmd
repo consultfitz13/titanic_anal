@@ -1,0 +1,14 @@
+---
+title: "Exploring characteristics of survivors of the Titanic disaster"
+author: "John Fitzpatrick"
+date: "Saturday, January 18, 2015"
+output: html_document
+---
+
+## How to use
+#### Select from the dropdown lists on the left hand side and click the Submit button
+#### The inputs you selected along with a plot comparing the total number of survivors
+#### and the survivors with the selected characteristics will be displayed.
+####
+#### The data for this analysis comes from Titanic dataset in the base R datasets package
+

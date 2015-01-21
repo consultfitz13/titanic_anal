@@ -1,7 +1,7 @@
 library(shiny)
 shinyUI(pageWithSidebar(
   headerPanel("Make selections in the dropdown boxes to the left below and click the Submit button 
-              to see how many people in that group survived the Titanic Disaster compared to the total number of survivors"),
+              to see how many people in that group survived the Titanic Disaster compared to the total number in that group aboard"),
   sidebarPanel(
 
     selectInput(inputId = "class",

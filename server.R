@@ -5,27 +5,31 @@ titanic.df <- as.data.frame(Titanic)
 
 survival.odds <- function(class,sex,age) {
   
+  available <- titanic.df
   survived <- titanic.df[titanic.df$Survived == "Yes",]
   
   if (class != "Any") {
     survived <- subset(survived,Class==class)
+    available <- subset(available,Class==class)    
   }
   
   if (sex != "Any") {
     survived <- subset(survived,Sex==sex)
+    available <- subset(available,Sex==sex)    
   }
   
   if (age != "Any") {
     survived <- subset(survived,Age==age)
+    available <- subset(available,Age==age)    
   }
   
   survived.count <- sum(survived$Freq)
-  total.count = sum(titanic.df[titanic.df$Survived == "Yes",c("Freq")])
+  total.count = sum(available$Freq)
   
   survivor_df <- data.frame(total.count, survived.count)
-  colnames(survivor_df) = c('Total Survivors','Selected Survivors')
+  colnames(survivor_df) = c('Total in Category','Total Survived in Category')
   
-  survivorPlot <- barplot(as.matrix(survivor_df), main="Survivors of the Titanic Disaster",
+  survivorPlot <- barplot(as.matrix(survivor_df), main="Analysis of the Survivors of the Titanic Disaster",
           xlab="", col=c("darkblue"),
   )
   
